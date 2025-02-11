@@ -8,12 +8,14 @@
       <div class="mb-3">
         <%= form.text_area :content, class: "form-control", placeholder: "いまどうしてる？", required: true %>
       </div>
-      <%= form.submit "Tweet", class: "btn btn-primary" %>
+      <div class="d-flex justify-content-end">
+        <%= form.submit "Tweet", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 
   <!-- ツイート一覧 -->
-  <h2 class="h4">All Tweets</h2>
+  <h2 class="h4">ツイート</h2>
   <ul class="list-group">
     <% @tweets.each do |tweet| %>
       <li class="list-group-item">
