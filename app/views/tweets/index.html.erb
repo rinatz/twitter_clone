@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h1 class="text-primary text-center">Twitter Clone</h1>
+
+  <!-- ツイート投稿フォーム -->
+  <div class="card p-3 mb-4">
+    <h2 class="h4">Post a new tweet as Alice</h2>
+    <%= form_with model: @new_tweet, url: tweets_path, local: true, html: { class: "mb-3" } do |form| %>
+      <div class="mb-3">
+        <%= form.text_area :content, class: "form-control", placeholder: "What's happening?", required: true %>
+      </div>
+      <%= form.submit "Tweet", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <!-- ツイート一覧 -->
+  <h2 class="h4">All Tweets</h2>
+  <ul class="list-group">
+    <% @tweets.each do |tweet| %>
+      <li class="list-group-item">
+        <strong class="text-info"><%= tweet.user.name %></strong>: <%= tweet.content %>
+      </li>
+    <% end %>
+  </ul>
+</div>
