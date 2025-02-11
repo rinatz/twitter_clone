@@ -1,24 +1,21 @@
-# README
+# 学習用に作成した Twitter クローン
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails の学習用に作成した Twitter のクローンです。
 
-Things you may want to cover:
+## 環境
 
-* Ruby version
+- Ruby 3.3.4
+- SQLite
+- Bootstrap
 
-* System dependencies
+## インストール
 
-* Configuration
+```bash
+$ bundle install
+```
 
-* Database creation
+## サーバーを起動
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+$ rails server
+```
