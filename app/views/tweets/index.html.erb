@@ -4,7 +4,7 @@
   <!-- ツイート投稿フォーム -->
   <div class="card p-3 mb-4">
     <h2 class="h4">Alice</h2>
-    <%= form_with model: @new_tweet, url: tweets_path, local: true, html: { class: "mb-3" } do |form| %>
+    <%= form_with model: @new_tweet, url: tweets_path(name: "Alice"), local: true, html: { class: "mb-3" } do |form| %>
       <div class="mb-3">
         <%= form.text_area :content, class: "form-control", placeholder: "いまどうしてる？", required: true %>
       </div>
